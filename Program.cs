@@ -42,7 +42,7 @@ namespace BumpVersion
                 Console.WriteLine(node.Value);
             }
 
-            file.Save(args[0]);
+            File.WriteAllText(args[0], file.ToString() + Environment.NewLine);
         }
 
         static string Bump(string version, int segmentNumber)
