@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <RuntimeIdentifier>win7-x86</RuntimeIdentifier>
+    <OutputTypeEx>library</OutputTypeEx>
+    <Authors>Björn Ali Göransson</Authors>
+    <Company />
+    <Description>Installs Sweek CMS on your project.</Description>
+    <Copyright>Björn Ali Göransson</Copyright>
+    <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</PackageLicenseUrl>
+    <AssemblyVersion>1.0.24.0</AssemblyVersion>
+    <Version>1.0.24.0</Version>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <BuildOutputTargetFolder>lib\net461</BuildOutputTargetFolder>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="Properties\launchSettings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\launchSettings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SweekCms.targets">
+      <PackagePath>build</PackagePath>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SweekCms.Core" Version="1.0.23" />
+    <PackageReference Include="SweekCms.Admin" Version="1.0.19" />
+    <PackageReference Include="SweekCms.JsonStore.FileBased" Version="1.0.6" />
+    <PackageReference Include="SweekCms.Mvc" Version="1.0.6" />
+  </ItemGroup>
+
+</Project>
